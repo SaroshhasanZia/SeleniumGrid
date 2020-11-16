@@ -1,0 +1,15 @@
+Configuration: 
+Download Selenium-standalone server 
+Start Hub > java -jar selenium-server-standalone-3.141.59.jar -role hub
+
+Verify: http://localhost:4444/grid/console
+
+Start Node > java -Dwebdriver.chrome.driver=C:\Users\VenD\Desktop\chromedriver.exe -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register
+
+Make Testng.xml for parralel execution 
+
+Code: 
+        DesiredCapabilities cap=DesiredCapabilities.chrome();
+        cap.setPlatform(Platform.LINUX);
+        URL url=new URL("http://localhost:4444/wd/hub");
+        WebDriver driver=new RemoteWebDriver(url, cap);
