@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="3">
+    <test verbose="2" preserve-order="true" name="C:/Users/VenD/IdeaProjects/TestNG/src/main/java/TestNGTesting.java">
+        <classes>
+            <class name="TestNGTesting">
+                <methods>
+                    <include name="OpenBrowser"/>
+                    <include name="Login"/>
+                    <include name="Successfull"/>
+
+                </methods>
+            </class>
+
+
+
+        </classes>
+
+    </test>
+</suite>
